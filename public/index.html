@@ -46,6 +46,13 @@
         h2 {
             text-align: center;
         }
+        .button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -54,7 +61,7 @@
     </header>
     <main>
         <h2>Welcome to my portfolio!</h2>
-        <p>About me:</p>
+        <p>About me</p>
         <p>Name: Joshua David Romero N.</p>
         <p>Age: 19</p>
         <p>From: Baguio City</p>
@@ -103,6 +110,18 @@
             </a>
         </div>
     </main>
+    <button id="changeColorButton">Change Background Color</button>
+
+<script>
+const button = document.getElementById('changeColorButton');
+
+button.addEventListener('click', function() {
+
+  const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+
+  document.body.style.backgroundColor = randomColor;
+});
+</script>
     <footer>
          2023 My Portfolio
     </footer>
